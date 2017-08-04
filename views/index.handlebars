@@ -2,9 +2,9 @@
 
 <div class="">
     <h1>Hipster Burger Bar!</h1>
-    <ol>
-    {{#each burgers}}
-        {{!-- {{#unless devoured}} --}}
+      <ol>
+    {{#each burgersSequels}}
+         {{#unless devoured}} 
         <li>
             
             {{burger_name}}
@@ -17,12 +17,12 @@
             </form>
         
         </li>
-        {{!-- {{/unless}} --}}
+         {{/unless}}
     {{/each}}
     </ol>
-</div>
+</div> 
 
-<h2>Add a burger to devour:</h2>
+ <h2>Add a burger to devour:</h2>
 
 <form class="new-burger" action="/" method="POST">
 
@@ -32,13 +32,13 @@
   </div>
 
   <button type="submit">Add Burger</button>
-</form>
+</form> 
 
-<div class="">
+{{!-- <div class="">
 	<h2>RIP Burgers!</h2>
 
 	<ol>
-	  {{#each burgers}}
+	  {{#each burgersSequel}}
 	    
         {{#if devoured}}
 	      
@@ -50,34 +50,7 @@
 	  
       {{/each}}
 	</ol>
-</div>
+</div>  --}}
 
-
-
-
-
-
-
-
-
-
-{{!-- <h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if this.sleepy}}
-      <li>
-        {{this.name}}
-
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="false">
-          <button type="submit">WAKE UP!</button>
-        </form>
-
-        {{> cats/delete-cat}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>   --}}
 
 

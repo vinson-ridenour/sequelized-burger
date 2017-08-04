@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Catelyn9!",
+    "database": "burgersSequel_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "dy3rq2436ak3kwxw",
+    "password": "ro95jpysinq66nlk",
+    "database": "mrihjn28b8l07hql",
+    "host": "a07yd3a6okcidwap.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
