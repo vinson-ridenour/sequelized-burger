@@ -4,8 +4,8 @@ var mysql = require("mysql2");
 var Sequelize = require("sequelize");
 
 if (process.env.JAWSDB_URL) {
-  var sequelize = new Sequelize("mrihjn28b8l07hql", "dy3rq2436ak3kwxw", "ro95jpysinq66nlk", {
-    host: "a07yd3a6okcidwap.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  var sequelize = new Sequelize("fyrkfnstlb9utgg4", "bnm44ybyqit7wicf", "ma1idwi4t1tp9jw2", {
+    host: "dyud5fa2qycz1o3v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     dialect: "mysql",
     pool: {
       max: 5,
@@ -26,14 +26,4 @@ else {
   });
 }
 
-// Make connection.
-// sequelize.connect(function(err) {
-//   if (err) {
-//     console.error("error connecting: " + err.stack);
-//     return;
-//   }
-//   console.log("connected as id " + sequelize.threadId);
-// });
-
-// Export connection for our ORM to use.
 module.exports = sequelize;
