@@ -10,31 +10,32 @@ router.get("/", function(req, res) {
     var hbsObject = {
       "burgersSequels": results
     };
-    console.log(hbsObject);
+    // console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/", function(req, res) {
-  Burger.create([
-    "burger_name" // has to match what you assigned this to in the HTML (input text box)
-  ], [
-    req.body.burger_name // name has to match what you assigned it to in the HTML
-  ], function() {
+  Burger.create({
+    "burger_name": req.body.burger_name // has to match what you assigned this to in the HTML (input text box)
+    });
     res.redirect("/");
-  });
 });
 
 router.put("/:id", function(req, res) {
-  var condition = "id = " + req.params.id + ";";
 
-  console.log(`Condition being passed to model to ORM: ${condition}`);
-
-  burger.update({
-    id: req.body.id
-  }, condition, function() {
-    res.redirect("/");
+  console.log(req.params.id);
+  // if (req.body.id) {
+  Burger.update({
+    "devoured": 1
+  }, { 
+    where: {
+      "id": req.params.id
+    }
   });
+  // }).then(function(updated) {
+  res.redirect("/");
+// }
 });
 
 // router.delete("/:id", function(req, res) {
